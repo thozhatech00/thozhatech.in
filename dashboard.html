@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dashboard | Thozha Tech Client Portal</title>
+  <meta name="description" content="Thozha Tech client portal dashboard." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">TT</span>
+        <span><strong>Thozha Tech</strong><small>Client Portal</small></span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Website</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="btn logout-btn" id="logoutBtn">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard-page">
+    <div class="container dashboard-wrap">
+      <div id="loading" class="loading">Loading secure dashboard...</div>
+
+      <section id="dashboardContent" style="display:none;">
+        <div class="dashboard-title">
+          <div>
+            <div class="eyebrow"><span></span> Authenticated Client Portal</div>
+            <h1>Welcome, <span id="userName">Client</span></h1>
+            <p>Manage IAM project updates, support, documents and training access.</p>
+            <div class="profile-line" id="userEmail"></div>
+          </div>
+        </div>
+
+        <div class="dash-grid">
+          <article class="dash-card">
+            <h3>Project Status</h3>
+            <p id="projectStatus">IAM discovery and onboarding dashboard is ready.</p>
+          </article>
+
+          <article class="dash-card">
+            <h3>Support Tickets</h3>
+            <ul>
+              <li>Open: 0</li>
+              <li>In Progress: 0</li>
+              <li>Resolved: 0</li>
+            </ul>
+          </article>
+
+          <article class="dash-card">
+            <h3>Documents</h3>
+            <ul>
+              <li>Design documents</li>
+              <li>Deployment plan</li>
+              <li>KT materials</li>
+            </ul>
+          </article>
+
+          <article class="dash-card">
+            <h3>Training</h3>
+            <p>IAM training access can be enabled for active customers.</p>
+          </article>
+
+          <article class="dash-card">
+            <h3>Access Requests</h3>
+            <p>Access request workflow can be integrated later with your IAM platform.</p>
+          </article>
+
+          <article class="dash-card">
+            <h3>Contact Support</h3>
+            <p>Email: contact@thozhatech.in</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
