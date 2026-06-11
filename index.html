@@ -3,105 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Thozha Tech | IDM & IAM Consulting Services</title>
-  <meta name="description" content="Thozha Tech provides Identity and Access Management consulting, NetIQ IDM implementation, AD and Azure AD provisioning, REST integration, SSPR, Access Manager, and IAM training services.">
-
+  <title>Thozha Tech | Enterprise IAM Consulting, Implementation & Support</title>
+  <meta name="description" content="Thozha Tech provides enterprise IAM, IGA, PAM, SSO and MFA consulting, implementation, integration and support across NetIQ, SailPoint, Saviynt, Okta, ForgeRock, Microsoft Entra ID, CyberArk, Active Directory and REST APIs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header class="navbar">
-    <div class="logo">Thozha Tech</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#solutions">Solutions</a>
-      <a href="#training">Training</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <span class="brand-mark">TT</span>
+        <span><strong>Thozha Tech</strong><small>Enterprise IAM Experts</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="nav" id="siteNav">
+        <a href="#services">Services</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#support">Support</a>
+        <a href="#training">Training</a>
+        <a class="nav-cta" href="#contact">Talk to Us</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <p class="tagline">IDM & IAM Consulting Services</p>
-      <h1>Identity & Access Management Specialists</h1>
-      <p>
-        We help organizations design, implement, and support secure Identity and Access Management solutions.
-      </p>
-      <p>
-        Specialized in NetIQ Identity Manager, eDirectory, Access Manager, SSPR,
-        Active Directory, Azure AD, REST integrations, and enterprise IAM automation.
-      </p>
-      <a class="btn" href="#contact">Contact Us</a>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> IAM • IGA • PAM • SSO • MFA • Identity Automation</div>
+          <h1>Enterprise IAM consulting, implementation and support for every identity platform.</h1>
+          <p class="hero-lead">Thozha Tech helps organizations modernize identity security with expert consulting, end-to-end implementation, application onboarding, integrations, migrations, governance, automation and production support.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Request IAM Consultation</a>
+            <a href="#services" class="btn btn-secondary">View Capabilities</a>
+          </div>
+          <div class="hero-metrics">
+            <div><strong>IAM</strong><span>Consulting & Strategy</span></div>
+            <div><strong>IGA</strong><span>Governance & Reviews</span></div>
+            <div><strong>SSO</strong><span>Access & MFA</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="panel-top"><span class="pulse"></span><strong>Identity Security Operating Model</strong></div>
+          <div class="identity-stack">
+            <div class="stack-row"><span>01</span><div><strong>Identity Sources</strong><p>HR, contractors, partners, vendors, students, customers</p></div></div>
+            <div class="connector"></div>
+            <div class="stack-row active"><span>02</span><div><strong>IAM / IGA / PAM Layer</strong><p>Policies, workflows, governance, roles, access controls</p></div></div>
+            <div class="connector"></div>
+            <div class="stack-row"><span>03</span><div><strong>Enterprise Access</strong><p>AD, Entra ID, SaaS apps, cloud, databases, APIs</p></div></div>
+          </div>
+          <div class="security-tags"><span>Zero Trust Ready</span><span>Audit Friendly</span><span>Automation First</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="platform-ribbon" id="platforms">
+      <div class="container ribbon-wrap">
+        <span>NetIQ</span><span>SailPoint</span><span>Saviynt</span><span>Okta</span><span>ForgeRock</span><span>Microsoft Entra ID</span><span>CyberArk</span><span>Active Directory</span>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span>What We Do</span>
+          <h2>Complete IAM services from assessment to production support.</h2>
+          <p>We work across identity lifecycle, governance, access management, privileged access, directories, cloud identity, application integrations and operational support.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card featured"><div class="service-no">01</div><h3>IAM Consulting & Roadmap</h3><p>Identity maturity assessment, platform selection, target architecture, operating model, migration strategy and implementation roadmap.</p></article>
+          <article class="service-card"><div class="service-no">02</div><h3>IAM Implementation</h3><p>Identity lifecycle, provisioning, deprovisioning, workflows, policies, approvals, reconciliation and production rollout.</p></article>
+          <article class="service-card"><div class="service-no">03</div><h3>IGA & Access Governance</h3><p>Access reviews, certifications, role governance, SoD controls, entitlement cleanup, orphan account handling and audit reporting.</p></article>
+          <article class="service-card"><div class="service-no">04</div><h3>SSO, MFA & Access Management</h3><p>SSO, MFA, federation, app onboarding, conditional access, access policies and secure authentication journeys.</p></article>
+          <article class="service-card"><div class="service-no">05</div><h3>PAM & Privileged Access</h3><p>Privileged account governance, vault integration, access request workflows, service account lifecycle and privileged controls.</p></article>
+          <article class="service-card"><div class="service-no">06</div><h3>Integration & Automation</h3><p>HR integration, AD, Entra ID, LDAP, JDBC, REST, SOAP, SCIM, Graph API, SaaS apps and custom connectors.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="container split">
+        <div>
+          <span class="section-kicker">Platform Coverage</span>
+          <h2>Specialized across leading IAM, IGA and access platforms.</h2>
+          <p>We support product implementation, integrations, upgrades, migrations, enhancements, troubleshooting and operations across enterprise identity ecosystems.</p>
+        </div>
+        <div class="platform-grid">
+          <div><strong>NetIQ / OpenText</strong><span>IDM, eDirectory, Access Manager, SSPR</span></div>
+          <div><strong>SailPoint</strong><span>IdentityIQ, IdentityNow, governance and certifications</span></div>
+          <div><strong>Saviynt</strong><span>IGA, access requests, campaigns and compliance</span></div>
+          <div><strong>Okta</strong><span>SSO, MFA, lifecycle management and app onboarding</span></div>
+          <div><strong>ForgeRock / Ping</strong><span>AM, IDM, DS, journeys, federation and CIAM</span></div>
+          <div><strong>Microsoft Entra ID</strong><span>Cloud identity, conditional access, groups and Graph API</span></div>
+          <div><strong>CyberArk</strong><span>PAM, privileged account lifecycle and vault integrations</span></div>
+          <div><strong>Directories & Apps</strong><span>AD, LDAP, HR systems, SaaS, databases and APIs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery" class="section">
+      <div class="container">
+        <div class="section-heading center"><span>Delivery Approach</span><h2>A structured implementation model built for enterprise success.</h2></div>
+        <div class="timeline">
+          <div><span>01</span><h3>Assess</h3><p>Review current identity landscape, apps, access risks, pain points and priorities.</p></div>
+          <div><span>02</span><h3>Design</h3><p>Prepare architecture, data model, access model, workflows, integrations and controls.</p></div>
+          <div><span>03</span><h3>Implement</h3><p>Build connectors, policies, roles, workflows, SSO integrations and automations.</p></div>
+          <div><span>04</span><h3>Operate</h3><p>Stabilize production, monitor issues, support operations and continuously improve.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="section support-section">
+      <div class="container support-card">
+        <div>
+          <span class="section-kicker">Managed Support</span>
+          <h2>Reliable IAM production support when identity operations matter most.</h2>
+          <p>We help IT and security teams handle incidents, change requests, connector failures, sync issues, access problems, audit findings, upgrades and platform enhancements.</p>
+        </div>
+        <div class="support-list">
+          <div>Incident analysis and RCA</div>
+          <div>Connector and workflow troubleshooting</div>
+          <div>Access request and approval issue resolution</div>
+          <div>Audit, certification and reconciliation support</div>
+          <div>Performance tuning and production stabilization</div>
+          <div>Migration, upgrade and enhancement assistance</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="training" class="section">
+      <div class="container training-layout">
+        <div>
+          <span class="section-kicker">Training & Enablement</span>
+          <h2>Practical IAM training for engineers, administrators and support teams.</h2>
+          <p>Training programs are designed around real project scenarios, product concepts, implementation tasks, integration patterns, troubleshooting and operational best practices.</p>
+        </div>
+        <ul class="check-list">
+          <li>IAM fundamentals and enterprise identity lifecycle</li>
+          <li>IAM / IGA product implementation concepts</li>
+          <li>SSO, MFA, federation and application onboarding</li>
+          <li>AD, Entra ID, REST API and HR integrations</li>
+          <li>Access reviews, governance, roles and audit readiness</li>
+          <li>Production troubleshooting and support procedures</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section industries">
+      <div class="container">
+        <div class="section-heading"><span>Use Cases</span><h2>Built for real enterprise identity problems.</h2></div>
+        <div class="usecase-grid">
+          <div>Joiner, Mover, Leaver automation</div>
+          <div>Contractor and vendor lifecycle</div>
+          <div>Application onboarding to SSO</div>
+          <div>Role-based and birthright access</div>
+          <div>Access review campaigns</div>
+          <div>Orphan and dormant account cleanup</div>
+          <div>Privileged and service account governance</div>
+          <div>Cloud identity and SaaS provisioning</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="container about-layout">
+        <div><span class="section-kicker">About Thozha Tech</span><h2>An IAM-focused company for consulting, implementation and support.</h2></div>
+        <div>
+          <p>Thozha Tech is built around deep Identity & Access Management expertise. We help organizations plan, implement, integrate, operate and improve IAM platforms across multiple products and enterprise environments.</p>
+          <p>Our focus is practical delivery: secure identity lifecycle, clean integrations, stable production operations, audit-ready governance and long-term support.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <span class="section-kicker">Let’s Talk</span>
+          <h2>Need IAM implementation, integration or production support?</h2>
+          <p>Speak to Thozha Tech for IAM consulting, platform implementation, product support, troubleshooting, training or managed identity operations.</p>
+        </div>
+        <div class="contact-box">
+          <a class="btn btn-primary full" href="mailto:contact@thozhatech.in">contact@thozhatech.in</a>
+          <a class="btn btn-secondary full" href="https://thozhatech.in">Visit thozhatech.in</a>
+          <p>Serving clients from India. Remote delivery available globally.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-layout">
+      <div><strong>Thozha Tech</strong><p>Enterprise IAM Consulting, Implementation & Support</p></div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#platforms">Platforms</a><a href="#contact">Contact</a></div>
+      <p>© 2026 Thozha Tech. All rights reserved.</p>
     </div>
-  </section>
-
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>NetIQ IDM Implementation</h3>
-        <p>Driver development, policy configuration, workflow setup, and production deployment.</p>
-      </div>
-
-      <div class="card">
-        <h3>IAM Integration</h3>
-        <p>Integration with HR systems, Active Directory, Azure AD, REST APIs, databases, and enterprise applications.</p>
-      </div>
-
-      <div class="card">
-        <h3>Access Management</h3>
-        <p>SSO, federation, reverse proxy, secure access, and NetIQ Access Manager support.</p>
-      </div>
-
-      <div class="card">
-        <h3>SSPR & Password Management</h3>
-        <p>Password policies, self-service reset, password sync, and secure notification workflows.</p>
-      </div>
-
-      <div class="card">
-        <h3>IDM Training</h3>
-        <p>Practical NetIQ IDM training for developers, administrators, and support teams.</p>
-      </div>
-
-      <div class="card">
-        <h3>Production Support</h3>
-        <p>Driver troubleshooting, synchronization issues, performance tuning, and production support.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="solutions" class="section dark">
-    <h2>Solutions We Deliver</h2>
-
-    <div class="solution-list">
-      <div>Joiner, Mover, Leaver automation</div>
-      <div>Active Directory and Azure AD provisioning</div>
-      <div>Role-based and birthright access</div>
-      <div>REST API based IDM integration</div>
-      <div>Audit, reconciliation, and compliance support</div>
-    </div>
-  </section>
-
-  <section id="training" class="section">
-    <h2>IDM Training</h2>
-    <p class="large-text">
-      We provide hands-on Identity Manager training covering drivers, policies,
-      ECMA scripting, workflows, password management, troubleshooting, and real-time IAM use cases.
-    </p>
-  </section>
-
-  <section id="contact" class="section contact">
-    <h2>Contact Thozha Tech</h2>
-    <p>Need IDM or IAM implementation support?</p>
-    <p>Email us at:</p>
-    <a class="email" href="mailto:contact@thozhatech.in">contact@thozhatech.in</a>
-  </section>
-
-  <footer>
-    <p>© 2026 Thozha Tech. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
