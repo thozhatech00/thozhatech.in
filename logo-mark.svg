@@ -1,0 +1,20 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Thozha Tech icon">
+  <defs>
+    <linearGradient id="g1" x1="48" y1="44" x2="210" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D3FF"/>
+      <stop offset="0.55" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0A1A2F"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="116" y1="31" x2="201" y2="172" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8D36A"/>
+      <stop offset="1" stop-color="#C8A96A"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#07152A"/>
+  <path d="M57 55L128 18L199 55V126C199 174 171 216 128 236C85 216 57 174 57 126V55Z" fill="#07152A" stroke="url(#g1)" stroke-width="11"/>
+  <path d="M128 42L178 68V124C178 157 160 188 128 207V42Z" fill="url(#g2)"/>
+  <path d="M78 70L128 42V207C96 188 78 157 78 124V70Z" fill="url(#g1)"/>
+  <path d="M94 114H162" stroke="#F8FAFC" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="128" cy="114" r="18" fill="#07152A" stroke="#F8FAFC" stroke-width="10"/>
+  <path d="M128 134V191" stroke="#F8FAFC" stroke-width="11" stroke-linecap="round"/>
+</svg>
