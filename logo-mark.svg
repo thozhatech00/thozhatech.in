@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Thozha Tech Mark</title>
+  <desc id="desc">TT monogram inside an enterprise identity shield.</desc>
+  <defs>
+    <linearGradient id="g1" x1="14" y1="8" x2="106" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8EDBFF"/>
+      <stop offset="0.45" stop-color="#2F80ED"/>
+      <stop offset="1" stop-color="#0A2540"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="120" height="120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#06152B" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="#06152B"/>
+  <g filter="url(#shadow)">
+    <path d="M60 14L102 32V62C102 87 83.5 104.5 60 110C36.5 104.5 18 87 18 62V32L60 14Z" fill="url(#g1)"/>
+    <path d="M60 23L93 37V61.5C93 80.2 79 94 60 99C41 94 27 80.2 27 61.5V37L60 23Z" stroke="white" stroke-opacity="0.28" stroke-width="1.6"/>
+    <circle cx="60" cy="60" r="26" stroke="white" stroke-opacity="0.35" stroke-width="2"/>
+    <path d="M40 42H80V51H65V82H54V51H40V42Z" fill="white"/>
+    <path d="M72 59H89V68H82V82H71V68H64V59H72Z" fill="white" fill-opacity="0.9"/>
+  </g>
+</svg>

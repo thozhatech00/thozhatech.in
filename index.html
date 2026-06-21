@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thozha Tech | Enterprise IAM, IGA, PAM, SSO & Training</title>
+  <meta name="description" content="Thozha Tech is a specialized Identity and Access Management consulting company offering IAM, IGA, PAM, SSO, MFA, Identity Lifecycle, NetIQ/OpenText, Okta, Entra ID, SailPoint, Saviynt, ForgeRock services, and IAM training with placement support." />
+  <meta name="theme-color" content="#06152B" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Thozha Tech | Enterprise Identity & Access Management" />
+  <meta property="og:description" content="Securing digital identities with IAM consulting, implementation, managed services, training and placement support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thozhatech.in/" />
+  <style>
+    :root {
+      --bg: #06152b;
+      --bg-2: #0a2140;
+      --card: rgba(255,255,255,.075);
+      --card-2: rgba(255,255,255,.105);
+      --text: #f7fbff;
+      --muted: #b9c9e6;
+      --soft: #7f98bf;
+      --line: rgba(255,255,255,.14);
+      --accent: #6bd5ff;
+      --accent-2: #2f80ed;
+      --gold: #e4c47a;
+      --shadow: 0 24px 80px rgba(0, 0, 0, .35);
+      --radius: 24px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(107,213,255,.22), transparent 34%),
+        radial-gradient(circle at 85% 8%, rgba(47,128,237,.23), transparent 30%),
+        linear-gradient(145deg, #050b18 0%, #06152b 44%, #091d36 100%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(5, 12, 27, .72);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 240px; }
+    .brand img { height: 54px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 24px; color: var(--muted); font-weight: 650; font-size: 14px; }
+    .nav-links a:hover { color: var(--text); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid rgba(255,255,255,.18);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #041225; border-color: transparent; box-shadow: 0 12px 30px rgba(47,128,237,.32); }
+    .btn-secondary { background: rgba(255,255,255,.08); color: var(--text); }
+    .hero {
+      position: relative;
+      padding: 92px 0 70px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 42px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.06);
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: .3px;
+    }
+    .eyebrow:before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 24px var(--accent);
+    }
+    h1 {
+      margin: 24px 0 18px;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: .96;
+      letter-spacing: -2.6px;
+    }
+    .highlight {
+      background: linear-gradient(135deg, #ffffff 0%, #8edbff 52%, #e4c47a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.75;
+      max-width: 720px;
+      margin: 0 0 28px;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+    }
+    .pill {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid var(--line);
+      color: #dce9ff;
+      font-size: 13px;
+      font-weight: 750;
+    }
+    .hero-card {
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      padding: 28px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.045)),
+        radial-gradient(circle at 24% 10%, rgba(107,213,255,.18), transparent 38%);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card:after {
+      content: "";
+      position: absolute;
+      inset: auto -50px -70px auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(228,196,122,.12);
+      filter: blur(20px);
+    }
+    .system-card {
+      min-height: 430px;
+      border-radius: 26px;
+      background: rgba(4,13,29,.58);
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .system-top { display:flex; align-items:center; justify-content:space-between; gap: 18px; margin-bottom: 24px; }
+    .system-title { font-weight: 900; letter-spacing: -.4px; }
+    .status { color: #7dffce; font-weight: 850; font-size: 13px; }
+    .node {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      background: rgba(255,255,255,.055);
+      margin-bottom: 14px;
+    }
+    .node-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(107,213,255,.95), rgba(47,128,237,.8));
+      display:grid;
+      place-items:center;
+      color: #021327;
+      font-weight: 950;
+    }
+    .node strong { display:block; margin-bottom: 3px; }
+    .node span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .metric-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 18px; }
+    .metric { padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.06); }
+    .metric b { display:block; font-size: 22px; margin-bottom: 4px; }
+    .metric small { color: var(--muted); font-weight: 700; }
+    section { padding: 74px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap: 28px; margin-bottom: 28px; }
+    h2 { font-size: clamp(30px, 4vw, 48px); margin: 0; letter-spacing: -1.3px; line-height: 1.05; }
+    .section-head p { color: var(--muted); margin: 0; line-height: 1.65; max-width: 560px; }
+    .grid-3 { display:grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px;
+      min-height: 210px;
+      box-shadow: 0 14px 42px rgba(0,0,0,.18);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .card:hover { transform: translateY(-5px); border-color: rgba(107,213,255,.42); background: var(--card-2); }
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, rgba(107,213,255,.25), rgba(47,128,237,.15));
+      border: 1px solid rgba(107,213,255,.25);
+      margin-bottom: 18px;
+      font-weight: 950;
+      color: #bfefff;
+    }
+    .card h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.35px; }
+    .card p { color: var(--muted); margin: 0; line-height: 1.65; }
+    .wide-card {
+      border: 1px solid rgba(228,196,122,.28);
+      background:
+        linear-gradient(135deg, rgba(228,196,122,.12), rgba(47,128,237,.09)),
+        rgba(255,255,255,.06);
+      border-radius: 32px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 32px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .wide-card h2 { margin-bottom: 14px; }
+    .wide-card p { color: var(--muted); line-height: 1.7; margin: 0 0 18px; }
+    .check-list { display:grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .check-list li {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.06);
+      color: #eaf3ff;
+      font-weight: 700;
+    }
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      gap: 12px;
+    }
+    .platform {
+      min-height: 74px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.065);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding: 12px;
+      color: #e9f2ff;
+      font-weight: 850;
+    }
+    .process { counter-reset: step; }
+    .process .card { position: relative; }
+    .process .card:before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display:block;
+      color: rgba(107,213,255,.55);
+      font-size: 14px;
+      font-weight: 950;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+    }
+    .contact {
+      padding-bottom: 88px;
+    }
+    .contact-box {
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(107,213,255,.16), transparent 32%),
+        linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+      padding: 42px;
+      box-shadow: var(--shadow);
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+    .contact h2 { margin-bottom: 14px; }
+    .contact p { margin: 0; color: var(--muted); line-height: 1.7; max-width: 720px; }
+    .contact-links { display:flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--soft);
+      padding: 26px 0 34px;
+    }
+    .footer-inner { display:flex; justify-content:space-between; gap: 20px; align-items:center; flex-wrap:wrap; }
+    .mini-brand { display:flex; align-items:center; gap: 12px; color: #dce9ff; font-weight: 850; }
+    .mini-brand img { width: 38px; height: 38px; border-radius: 10px; }
+    @media (max-width: 980px) {
+      .hero-grid, .wide-card, .contact-box { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: repeat(2,1fr); }
+      .platforms { grid-template-columns: repeat(3,1fr); }
+      .nav-links { display:none; }
+    }
+    @media (max-width: 640px) {
+      .shell { width: min(100% - 26px, var(--max)); }
+      .hero { padding-top: 58px; }
+      h1 { letter-spacing: -1.7px; }
+      .grid-3, .grid-2, .metric-grid, .platforms { grid-template-columns: 1fr; }
+      .brand img { height: 46px; }
+      .contact-box, .wide-card, .hero-card { padding: 22px; border-radius: 24px; }
+      .section-head { display:block; }
+      .section-head p { margin-top: 14px; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top" aria-label="Thozha Tech home">
+        <img src="logo.svg" alt="Thozha Tech" />
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#training">Training & Placement</a>
+        <a href="#platforms">Platforms</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="mailto:sales@thozhtech.in">Start a Conversation</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow">Enterprise Identity & Access Management Solutions</div>
+          <h1>Secure every identity. <span class="highlight">Enable trusted access.</span></h1>
+          <p class="lead">Thozha Tech is a specialized IAM consulting company helping enterprises design, implement and manage secure digital identity platforms across workforce, customer and privileged access use cases.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Discuss Your IAM Requirement</a>
+            <a class="btn btn-secondary" href="#training">Explore Training & Placement</a>
+          </div>
+          <div class="trust-row" aria-label="Capabilities">
+            <span class="pill">IAM</span>
+            <span class="pill">IGA</span>
+            <span class="pill">PAM</span>
+            <span class="pill">SSO</span>
+            <span class="pill">MFA</span>
+            <span class="pill">Lifecycle Automation</span>
+            <span class="pill">Training & Placement</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Identity operations overview">
+          <div class="system-card">
+            <div class="system-top">
+              <div>
+                <div class="system-title">Identity Control Plane</div>
+                <small style="color:var(--muted);font-weight:700">Consulting • Implementation • Operations</small>
+              </div>
+              <div class="status">LIVE READY</div>
+            </div>
+            <div class="node">
+              <div class="node-icon">ID</div>
+              <div><strong>Identity Lifecycle</strong><span>Joiner, mover, leaver workflows with directory, HR and application integration.</span></div>
+            </div>
+            <div class="node">
+              <div class="node-icon">SSO</div>
+              <div><strong>Access Management</strong><span>SSO, MFA, federation, conditional access and secure authentication experiences.</span></div>
+            </div>
+            <div class="node">
+              <div class="node-icon">GRC</div>
+              <div><strong>Governance & Compliance</strong><span>Role-based access, approvals, access reviews, audit readiness and risk reduction.</span></div>
+            </div>
+            <div class="metric-grid">
+              <div class="metric"><b>360°</b><small>Identity coverage</small></div>
+              <div class="metric"><b>24x7</b><small>Ops mindset</small></div>
+              <div class="metric"><b>Real</b><small>Project training</small></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="shell">
+        <div class="section-head">
+          <h2>IAM services built for enterprise outcomes.</h2>
+          <p>From advisory to deployment and ongoing support, we focus on practical identity solutions that improve security, compliance and user experience.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="icon">01</div><h3>IAM Consulting</h3><p>Assessment, architecture, roadmap creation, product selection and implementation planning for enterprise identity platforms.</p></article>
+          <article class="card"><div class="icon">02</div><h3>Identity Governance</h3><p>Access request, approval workflows, role management, certification support and governance process implementation.</p></article>
+          <article class="card"><div class="icon">03</div><h3>Lifecycle Automation</h3><p>Joiner, mover, leaver automation with HR, directory, email, collaboration and business application integrations.</p></article>
+          <article class="card"><div class="icon">04</div><h3>SSO & MFA</h3><p>Federation, SAML/OIDC integrations, strong authentication and modern access control for secure user journeys.</p></article>
+          <article class="card"><div class="icon">05</div><h3>PAM Services</h3><p>Privileged access strategy, vaulting, approval models, session control and operational hardening guidance.</p></article>
+          <article class="card"><div class="icon">06</div><h3>Managed Support</h3><p>Run, maintain and enhance IAM platforms with change support, issue resolution and continuous improvement.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="training">
+      <div class="shell">
+        <div class="wide-card">
+          <div>
+            <div class="eyebrow">Training & Placement</div>
+            <h2>Real-time IAM training for career-ready professionals.</h2>
+            <p>We help freshers and IT professionals build strong careers in Identity and Access Management through practical, project-based learning. The program focuses on real-time IAM implementation scenarios, identity lifecycle, access governance, SSO, MFA, directory integration, workflow automation and enterprise security practices.</p>
+            <p>Placement support includes resume preparation, interview guidance, project exposure and mentoring to help candidates become industry-ready.</p>
+            <a class="btn btn-primary" href="mailto:sales@thozhtech.in?subject=Training%20%26%20Placement%20Enquiry">Enquire About Training</a>
+          </div>
+          <ul class="check-list">
+            <li>Project-based IAM implementation learning</li>
+            <li>Freshers and working professionals career support</li>
+            <li>Interview preparation and resume guidance</li>
+            <li>Hands-on exposure to IAM, IGA, SSO, MFA and lifecycle use cases</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="platforms">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Platform coverage.</h2>
+          <p>We work across leading identity and security ecosystems based on customer requirements and enterprise architecture.</p>
+        </div>
+        <div class="platforms">
+          <div class="platform">OpenText / NetIQ</div>
+          <div class="platform">Microsoft Entra ID</div>
+          <div class="platform">Okta</div>
+          <div class="platform">SailPoint</div>
+          <div class="platform">Saviynt</div>
+          <div class="platform">ForgeRock</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Clear delivery approach.</h2>
+          <p>We keep every engagement structured, transparent and focused on measurable business value.</p>
+        </div>
+        <div class="grid-3 process">
+          <article class="card"><h3>Discover</h3><p>Understand current identity landscape, integrations, risks, dependencies and business expectations.</p></article>
+          <article class="card"><h3>Design</h3><p>Create practical architecture, use-case design, access model and phased implementation plan.</p></article>
+          <article class="card"><h3>Deliver</h3><p>Implement, test, document and enable operations with smooth handover and support readiness.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="shell">
+        <div class="contact-box">
+          <div>
+            <h2>Let’s build trusted identity together.</h2>
+            <p>Connect with Thozha Tech for IAM consulting, implementation support, managed services, corporate training or fresher placement support.</p>
+            <div class="contact-links">
+              <a class="btn btn-primary" href="mailto:sales@thozhtech.in">sales@thozhtech.in</a>
+              <a class="btn btn-secondary" href="tel:+917845009964">+91 78450 09964</a>
+            </div>
+          </div>
+          <img src="logo-mark.svg" alt="Thozha Tech mark" width="120" height="120" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div class="mini-brand"><img src="logo-mark.svg" alt="" /> Thozha Tech</div>
+      <div>© <span id="year"></span> Thozha Tech. Identity. Access. Trust.</div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
